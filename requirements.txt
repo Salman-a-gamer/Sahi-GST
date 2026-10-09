@@ -1,1 +1,7 @@
--r backend/requirements.txt
+Django>=5.2,<5.3
+django-allauth>=65.0,<66
+dj-database-url>=2.3,<4
+psycopg[binary]>=3.2,<4
+whitenoise>=6.9,<7
+gunicorn>=23,<24
+Pillow>=11,<13
