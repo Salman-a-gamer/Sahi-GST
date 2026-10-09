@@ -1,0 +1,39 @@
+when ever writing a prompt use this, 
+C - Context  
+Set the scene. Tell the AI:
+What you do  
+What the situation is  
+Your goals  
+Who the audience is  
+
+R - Role  
+Assign the AI a clear identity:
+"Act as a senior marketing strategist for SaaS startups"  
+"Be a UX designer who specializes in mobile onboarding flows"
+
+I - Instruction  
+Explain the task and why it matters:
+What you want done  
+Why you're doing it  
+What success looks like  
+
+S - Specification  
+Explain how you want the result delivered:
+Format (bullets, slides, paragraphs)  
+Length  
+Tone and voice  
+Must-have elements  
+
+P - Performance  
+Set clear quality standards:
+Success criteria  
+Metrics to hit  
+What to avoid  
+Industry standards  
+
+E - Example  
+Show what good looks like:
+Sample content  
+Previous success  
+Competitor examples  
+Specific elements to replicate         .................... Also tell me what to do will your next response since it takes time. i dont want to waste it.

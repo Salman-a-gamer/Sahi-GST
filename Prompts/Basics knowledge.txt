@@ -1,0 +1,100 @@
+# The ecosystem in plain words
+
+**GST** is one sales tax for all of India. Every seller adds GST to the bill and passes that money to the government. The bill is called a **tax invoice**.
+
+The key idea is **input tax credit (ITC)**, which prevents double tax. Example:
+
+- A shopkeeper buys goods for ₹1,000 plus 18% GST, so ₹180 tax.
+- He sells them for ₹1,500 plus 18% GST, so ₹270 tax.
+- He only owes the government ₹270 − ₹180 = **₹90**, because he gets credit for the ₹180 he already paid.
+- If that ₹180 credit gets blocked, he pays the full ₹270 and loses ₹180 on one bill.
+
+**Who is involved**
+- **Seller** makes the invoice. **Buyer** receives it and claims credit.
+- **GST portal (GSTN)** is the government system that collects everything.
+- **E-invoice portal (IRP)** checks and stamps invoices for bigger businesses.
+- **CA (accountant)** files returns for most small businesses.
+- **Billing software** (Tally, Zoho, Vyapar and similar) makes invoices and reports.
+- **GSP companies** connect that software to the government portals.
+
+**The monthly loop**
+1. Seller files **GSTR-1**: "here are the invoices I issued."
+2. The portal builds the buyer's **GSTR-2B**: "here is what your suppliers reported."
+3. Buyer files **GSTR-3B**: a summary plus payment. In general, credit is only allowed for what shows up in 2B.
+
+**Where it breaks**
+- Seller makes a typo (wrong GSTIN, tax split, HSN code, missing field).
+- Seller files late or never.
+- Buyer can't tell any of this until weeks later.
+- Then the credit is blocked, a notice arrives, and the CA charges to fix it.
+
+One bill, two businesses hurt, weeks of delay. That is our problem.
+
+**Small glossary:** GSTIN is the 15-character GST number. HSN is the product code. CGST+SGST is tax within a state. IGST is tax between states. IRN is the e-invoice's unique number.
+
+# Why our solution does math (and why not the AI model)
+
+It does. The confusion is mine: I said the *AI model* should not do math. The math is done by **plain code**, which is the better method.
+
+- Code gives the same exact answer every time. A language model only predicts likely text, so it can slip on numbers.
+- Example: ₹1,000 × 18% = ₹180. If the invoice says ₹108, the code flags it every single time.
+- The GSTIN checksum is also just a formula, and code computes it perfectly.
+- Rates, state codes and HSN codes live in lookup tables. Code compares against them.
+
+The AI does the two jobs code can't: reading a blurry photo, and explaining errors in simple Hindi or Telugu.
+
+Bonus: the math also catches AI reading mistakes. If line items don't add up to the total, the AI probably misread a digit, so we ask the user to confirm it.
+
+# Talking to a shopkeeper or supermart manager
+
+Yes, do it. It is the best thing you can do for the problem story. Best people to talk to:
+
+1. **A CA or accountant.** They see these errors every month and can tell you the most common ones.
+2. **A supermart manager.** They receive bills from many suppliers, so they feel the buyer-side pain.
+3. **A small trader who sells to shops.** They feel the seller-side pain.
+
+A tiny kirana shop may be unregistered or on a simple scheme and may not feel this much, so don't rely on that alone.
+
+**Ground rules:** say it's a student project, ask permission before recording or quoting, don't collect GSTINs or financial figures, and ask for a redacted sample of a bill that had a problem.
+
+**What to ask** (ask about real past events, not "would you use this?"):
+1. Walk me through how a bill gets made here. Who makes it, and with what?
+2. How do you check bills you receive from suppliers?
+3. Tell me about the last time a bill had a mistake. Who found it, when, and what did it cost you?
+4. Has your tax credit ever not shown up? What did you do?
+5. When do you find out about errors? Only at month end?
+6. How much time and money goes to your CA each month for this?
+7. When the supplier made the mistake, what happened? How long to fix?
+8. What is the most confusing part: the words, the forms or the rules?
+9. In what language would you want errors explained?
+10. What do you use today to avoid mistakes, and what would make you switch?
+
+**How to use it in the hackathon**
+- Open the pitch with one real story and one short quote (with permission, e.g. "supermart manager, Warangal").
+- Turn their answers into your top five rules, ordered by how often errors happen.
+- Test the MVP on redacted real bills. This backs up the 30% "working MVP" score.
+- Use their monthly time and CA cost on the market slide.
+- Judges may ask "who did you talk to?" Have the answer ready.
+- Log the interviews as research in your team contributions.
+
+Be honest: three interviews are stories, not statistics. Pair them with official numbers, and never polish a quote beyond what the person actually said.
+
+# Showing the problem is big
+
+Use four layers: a number, a story, a chain, a demo.
+
+**Number:** GST-registered taxpayers grew from 66.5 lakh in 2017 to 1.65 crore by May 2026. That is the Finance Ministry's figure, so it is safe to quote. Each registered business sends and receives many invoices every month.
+
+**The tax department is getting sharper too.** The Finance Ministry says it uses AI and data analytics to focus enforcement on high-risk taxpayers. Mismatches will be caught more and more, so small businesses need a pre-check.
+
+**Story:** one real quote from your interview, in the first 20 seconds.
+
+**Chain:** one slide showing one typo, then two businesses, then weeks of delay, then a notice, then a CA fee. It makes a small error look like a big cost.
+
+**Demo:** the "four errors in five seconds" opener.
+
+**Your own cost example:** use the ₹1,000/₹180 case above, then ask your interviewee for a real rupee loss.
+
+One gap to fill: I did not find a verified number for how many ITC-mismatch notices go out. Check Parliament replies from the Finance Ministry and GSTN data. Until you have it, don't quote one.
+
+Also double-check any "over 80% of taxpayers are proprietorships" claim before using it. I only saw it on a blog.

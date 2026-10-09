@@ -1,0 +1,72 @@
+Fin Tech - GST Invoice Validation*. "Check invoices and GST data for missing fields and mismatches.... This is my hackathon problem statement. I need you to plan everything for me. We need to go far and in depth like build the web app that works in all platforms.
+ First properly define what the main issue is. Think about what the average indian faces when using gst checks , invoice validation, or any aspect where these are used. Think of the root cause of the problem can we eliminate it?   Install any plugins required for you to do this job  (plan) the finest .  Also maintain a log with all the difficulties we faced how we overocame them. also onw log like readme that explains the project in detail. 
+ What would the judges look for, what will they ask?      MAJOR Thing right now is to focus on the problem(s) we will solve for the average indian related to the topic. IMPORTANT.  so make a good plan of action. Act as a hybrid VC strategist + design evaluator.   also evaluate your idea  with existing ones out there (can you the diffence in elevator pitch. ) .Do a side-by-side breakdown across these dimensions:
+Strategic framing
+Value proposition clarity
+Innovation edge
+Market relevance
+Execution realism
+For each dimension, briefly state:
+1. What the winning project does right
+2. How my idea compares
+3. What leverage tactic I should adopt
+4. What blind spot I must address
+End with a 3-point upgrade summary to reframe your idea without changing its core."
+Everything we build later on, the demo, website, presentation, live program. It should be very attention grabbing, in the problem statement, how the presentation/ website looks,etc. give us opening statements. Etc. gotta be visually impressive and stand out.  if possible we will use mobile app and show what we have done.  We need to first get the main / core idea working then we can do other stuff IMPORTANT.
+Strict Deadlines
+ The submission portal will lock exactly at the deadline. Late submissions will not be evaluated under any circumstances.
+Originality
+ Plagiarism will lead to immediate disqualification. Build something original that solves the problem statement uniquely.
+The jury will spend very little time with us, I need an elevator speech. IMPORTANT.
+Evaluation Criteria
+ Understand how judges will assess your project.
+Judging rubric
+Evaluation Criteria
+ Your project will be evaluated across six areas. Use these criteria to focus your build and prepare a clear, working demonstration.
+Criteria weighting
+ 100% total
+ Criterion 01
+Working MVP
+ 30%
+ The core flow must work live.
+Criterion 02
+AI/SaaS Relevance
+ 20%
+ AI must meaningfully improve the solution.
+Criterion 03
+UI/UX
+ 15%
+ The product should be clear and demo-friendly.
+Criterion 04
+Market Potential
+ 15%
+ Clear target user and business value.
+Criterion 05
+Innovation
+ 10%
+ Fresh thinking or strong execution.
+Criterion 06
+Demo & Pitch
+ 10%
+ Clear explanation of problem, solution and future scope.
+Remind me to log the team contributions Team Contributions
+ Describe what each team member contributed to the project.
+What did each member work on?
+ Enter each teammate's individual contribution to building the project. Be specific about features, design, research, integrations, testing, or pitching..
+ SUBMISSION CHECKLIST
+Source code
+Project ZIP
+Presentation
+2-minute demo video
+Live product (IMPORTANT)
+ Upload your project as a ZIP file to Google Drive           .................... our preferred tech stack is as follows because my team mate knows these technologies, Tech Stack
+Locked
+Frontend
+ReactNext.js
+Backend
+Django
+Database
+PostgreSQL
+Auth
+Django Allauth. 
+Keep the ZIP at or below 10 MB. Exclude dependency folders and generated/library files such as node_modules, build outputs, and virtual environments. Set Drive sharing to anyone with the link can view, then paste the link below.........................  IMP: right now focus on the planning. also tell me how am i gonna build it with my friend , we both have codex with plus plan. .... this is what another ai suggested, NOTE : dont rely on the other ai but evaulate what he said and use it if is nice. ... i have attached it as text.

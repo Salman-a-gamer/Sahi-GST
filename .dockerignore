@@ -1,0 +1,10 @@
+.git
+.venv
+.local
+**/node_modules
+**/.next
+**/out
+**/__pycache__
+**/*.sqlite3
+.env*
+artifacts
