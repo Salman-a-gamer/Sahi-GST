@@ -17,6 +17,8 @@ flowchart LR
 
 1. The browser accepts a JPEG/PNG under 5 MB and at most 20 megapixels. Tesseract.js reads it locally. First use downloads OCR assets; this is not an offline guarantee.
 2. OCR text goes to Django's `/api/parse/`. A regex label parser proposes fields. Missing labels remain null. It does not infer a product's legal tax rate or fill missing taxes with zero.
+
+Parser update on `feature/invoice-extraction`: labels can be colon-separated or whitespace-separated, values may follow on the next line, currency prefixes/grouping are normalized, and tax percentages are kept distinct from monetary amounts. Explicit supplier/buyer headings can assign a bare GSTIN; a bare unscoped GSTIN stays unknown. ISO/named-month dates normalize to YYYY-MM-DD; ambiguous numeric dates stay null. Repeated conflicting values stay null. Five synthetic OCR-text layouts and additional safety regressions pass; no real-world OCR accuracy figure is claimed.
 3. The person confirms fields against the original and confirms the limited invoice scope. After an edit, the updated frontend requires fresh confirmation.
 4. `/api/reviews/` runs deterministic checks, stores a review and returns findings plus a correction draft. Each run is a new record; it does not overwrite the original review.
 5. The frontend displays saved history, drafts and JSON exports. Copying a draft does not send it or mark an invoice resolved.

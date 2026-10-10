@@ -46,6 +46,13 @@ Record actual events. Status values: resolved in planning, verified fixed, open,
 
 ## Append template
 
+### Invoice extraction branch on 10 October
+
+- **Collaboration assumptions:** fetched teammate/main and verified local code contains all friend's current commits plus our one documentation/confirmation commit. Started feature/invoice-extraction. GitHub reports Salman has read-only access to Rayyan's repo; documented collaborator/PR setup and the temporary Git merge handoff.
+- **Parser missed common layouts:** reproduced unsupported whitespace labels, next-line values and tax-rate-plus-amount lines with five synthetic text fixtures. Added conservative label/date/currency/section handling. Unknown/conflicting values remain null.
+- **Overlapping labels:** regression detected Supplier GSTIN being misread as supplier name. Excluded GSTIN from party-name labels and preferred the most complete label, avoiding Total taxable value being read as invoice total.
+- **Verification:** 14 backend tests pass in local SQLite smoke-test mode. This change is parsing code only; no frontend build or cloud deployment was needed. Real image tests remain a human task, not a completed accuracy benchmark.
+
 - Date/time IST:
 - Owner:
 - Observed problem and reproduction:

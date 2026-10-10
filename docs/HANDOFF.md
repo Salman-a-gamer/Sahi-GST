@@ -9,7 +9,7 @@ Updated 10 October 2026. Deadline: **Sunday 11 October, 09:00 IST**; submission 
 - Live demo: https://sahi-gst-d511.vercel.app/
 - Imported friend's latest checked commit: `3c349a8`; four deployment fixes atop our baseline.
 - This checkout preserves those fixes and adds docs plus field-confirmation/result-clarity corrections. Exact final commit: use `git log -1 --oneline` after this work is committed.
-- No active shared-repository decision has been made. Recommended: use the friend's deployed repo as the shared main repo, since its Vercel link already works. Grant the other teammate collaborator access and work in separate branches/clones.
+- User confirmed the intended workflow: one shared project, separate feature branches, pull-request review/merge, then teammate continues. Use the friend's deployed repo as shared integration target; the current authenticated Salman account has read-only access there. Rayyan must add Salman-a-gamer as collaborator for direct feature-branch pushes/PRs. Local origin still points to Salman's repo; teammate points to Rayyan's. No force-push or remote replacement is needed.
 
 ## Continue from your friend's Codex
 
@@ -63,7 +63,15 @@ Before stopping or approaching a usage limit: save changes, update this handoff,
 
 ## Next bounded coding task
 
-Improve the parser using 3–5 synthetic/redacted invoice layouts that actually fail, with expected field fixtures. Start with invoice number/date and totals. Keep missing/ambiguous values null. Fix observed patterns with focused regression tests before adding feature breadth. Choose one owner for parser/rules and one for UX/tests; review each other's work.
+First parser improvement completed on `feature/invoice-extraction`: five synthetic OCR-text fixtures cover labels without separators, next-line values, explicit party sections, dates, rate-versus-amount and conflicting totals. Fourteen backend tests pass in SQLite smoke-test mode. This tests parsing after OCR, not real image recognition. Frontend/model/database schema did not change in this step.
+
+Next: test 3–5 redacted/synthetic **images** with local OCR and record misreads/layout gaps. Add only reproduced failures to fixtures. In particular, ambiguous numeric dates stay null; GSTIN OCR substitutions are not silently corrected; multiple conflicting rates/totals stay unknown. Use the API guide and manual test list below.
+
+### Delivering this feature to the shared repo
+
+After Rayyan grants collaborator access, push this branch to `teammate` and open a PR targeting Rayyan's `main`. The branch includes the earlier docs/confirmation commit missing from his main. Review that complete diff. Once merged, both teammates pull shared main before starting the next branch.
+
+Until then, the branch is pushed to Salman's repo. Rayyan can fetch the exact branch using a `salman` remote, run `git merge --ff-only salman/feature/invoice-extraction` from a clean up-to-date main, and push to his origin. If he has newer work and fast-forward fails, review a normal merge. This is a Git merge handoff, not a GitHub pull request across unrelated repositories. Do not present it as already merged/deployed.
 
 ## Work to do while Codex allowance recovers
 

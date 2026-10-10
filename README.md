@@ -17,6 +17,7 @@ The initial user is a small Indian trading business receiving ordinary domestic 
 - Working local MVP: responsive overview, invoice inbox, image OCR, field confirmation, deterministic checks, correction drafts, saved reviews and JSON reports.
 - Django Allauth account flow and session-isolated guest workspace implemented. PostgreSQL migrations and 10 backend tests pass; Next.js production export passes.
 - Real local OCR and the invoice-to-request flow have been exercised in the browser. OCR can misread identifiers; human confirmation remains essential.
+- On `feature/invoice-extraction`, OCR-text parsing now handles five additional synthetic layout patterns; 14 backend tests pass. Regression-set present fields improve from 7/22 to 22/22, and expected unknowns from 4/10 to 10/10. These are synthetic parser results, not real-image accuracy.
 - Optional Gemini adapter is implemented but not live-key verified. The baseline has no API fee and does not need a key.
 - Friend's live demo: [sahi-gst-d511.vercel.app](https://sahi-gst-d511.vercel.app/). Health/session and a synthetic invoice API flow verified on 10 October; PostgreSQL reports ready and cloud extraction is disabled. Current local confirmation/UI fixes require merge into the friend's deployed repo. No user interviews, real-world accuracy benchmark or legal certification is claimed.
 - Twenty combined person-hours is the conservative planning budget. User said a minimum of about 20 hours; per-person availability remains unconfirmed.
